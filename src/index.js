@@ -10,7 +10,7 @@ const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
 
-const port = 'https://go-and-chat.herokuapp.com/' || 3000
+const port = process.env.PORT || 3000
 
 const publicDirectoryPath = path.join(__dirname,'../public')
 
